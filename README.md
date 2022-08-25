@@ -3,7 +3,9 @@ A Custom Countdown App -- Built with Date, LocalStorage
 
 Tech Stack: HTML, CSS, Vanilla JS, [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
-SCREENSHOTS:
+*** SCREENSHOTS ***:
+
+
 ![](Custom%20Countdown%20-%20720.gif)
 
 
