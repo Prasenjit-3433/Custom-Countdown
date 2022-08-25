@@ -56,12 +56,26 @@ function updateCountdown(event) {
     countdownTitle = this[0].value;
     countdownDate = this[1].value;
     console.log(countdownTitle, countdownDate);
+    this[0].value = '';
+    this[1].value = '';
     // Get number version of current Date, updateDOM
     countdownValue = new Date(countdownDate).getTime();
     console.log('countdownValue', countdownValue);
     updateDOM();
 }
 
+// Reset All Values
+function reset() {
+    // Hide Countdown, Show Input
+    countdownElement.hidden = true;
+    inputContainer.hidden = false;
+    // Stop the countdown
+    clearInterval(countdownActive);
+    // Reset Values
+    countdownTitle = '';
+    countdownDate = '';
+}
 
 // Event Listeners
 countdownForm.addEventListener('submit', updateCountdown);
+countdownBtn.addEventListener('click', reset);
