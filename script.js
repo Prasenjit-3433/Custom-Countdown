@@ -58,10 +58,16 @@ function updateCountdown(event) {
     console.log(countdownTitle, countdownDate);
     this[0].value = '';
     this[1].value = '';
-    // Get number version of current Date, updateDOM
-    countdownValue = new Date(countdownDate).getTime();
-    console.log('countdownValue', countdownValue);
-    updateDOM();
+    
+    // Validation Check: Title, Date
+    if (countdownTitle === '' || countdownDate === '') {
+        alert('Please select a proper Title & Date for the Countdown!')
+    } else {
+        // Get number version of current Date, updateDOM
+        countdownValue = new Date(countdownDate).getTime();
+        console.log('countdownValue', countdownValue);
+        updateDOM();
+    }
 }
 
 // Reset All Values
