@@ -13,7 +13,7 @@ const completeBtn = document.getElementById('complete-button');
 
 let countdownTitle = '';
 let countdownDate = '';
-let countdownValue = Date;
+let countdownValue = new Date();
 let countdownActive;
 let savedCountdown;
 
@@ -31,7 +31,7 @@ dateElement.setAttribute('min', today);
 // Populate Countdown / Complete UI
 function updateDOM() {
     countdownActive = setInterval(() => {
-        const now = new Date().getTime();
+    const now = new Date().getTime();
     const distance = countdownValue - now;
 
     const days = Math.floor(distance / day);
